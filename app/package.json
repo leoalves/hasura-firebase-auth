@@ -1,0 +1,53 @@
+{
+    "name": "soldits-ui",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@craco/craco": "^3.4.1",
+        "@reach/router": "^1.2.1",
+        "@types/node": "^10.12.21",
+        "@types/react": "^16.8.2",
+        "antd": "^3.13.1",
+        "apollo-cache-inmemory": "^1.4.2",
+        "apollo-client": "^2.4.12",
+        "apollo-link": "^1.2.8",
+        "apollo-link-error": "^1.1.7",
+        "apollo-link-http": "^1.5.11",
+        "apollo-link-state": "^0.4.2",
+        "apollo-link-ws": "^1.0.14",
+        "apollo-utilities": "^1.1.2",
+        "awesome-debounce-promise": "^1.0.0",
+        "axios": "^0.18.0",
+        "craco-antd": "^1.10.0",
+        "firebase": "^5.8.2",
+        "graphql": "^14.1.1",
+        "graphql-tag": "^2.10.1",
+        "react": "^16.8.1",
+        "react-apollo": "^2.4.1",
+        "react-dependent-script": "^1.1.0",
+        "react-dom": "^16.8.1",
+        "react-scripts": "2.1.3",
+        "rebass": "^3.0.1",
+        "subscriptions-transport-ws": "^0.9.15",
+        "uuid": "^3.3.2"
+    },
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "@types/reach__router": "^1.2.3",
+        "typescript": "^3.3.1"
+    }
+}

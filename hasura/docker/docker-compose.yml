@@ -1,0 +1,23 @@
+version: '3.6'
+services:
+  graphql-engine:
+    image: hasura/graphql-engine:v1.0.0-alpha38
+    ports:
+      - '8080:8080'
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://username:password@domain:5432/database
+      HASURA_GRAPHQL_ACCESS_KEY: 'blablabalalbablabalabl'
+      HASURA_GRAPHQL_JWT_SECRET: '{"type":"RS512","jwk_url": "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"}'
+      VIRTUAL_HOST: mydomain
+      VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: lets_encrypt_account
+      LETSENCRYPT_EMAIL: lets_encrypt_email
+    command:
+      - graphql-engine
+      - serve
+      - --enable-console
+networks:
+  default:
+    external:
+      name: 'webproxy'
