@@ -50,18 +50,30 @@ firebase init
 ```
 
 ⋅⋅* Are you ready to proceed? Y
+
 ⋅⋅* Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
+
 ⋅⋅* Are you ready to proceed? Y
+
 ⋅⋅* What language would you like to use to write Cloud Functions? Select Typescript
+
 ⋅⋅* Do you want to use TSLint to catch probable bugs and enforce style? Y
+
 ⋅⋅* File functions/package.json already exists. Overwrite? N
+
 ⋅⋅* File functions/tsconfig.json already exists. Overwrite? N
+
 ⋅⋅* File functions/src/index.ts already exists. Overwrite? N
+
 ⋅⋅* File functions/.gitignore already exists. Overwrite? N
+
 ⋅⋅* Do you want to install dependencies with npm now? Y
+
 ⋅⋅* What do you want to use as your public directory? (public) ./app/build
+
 ⋅⋅* Configure as a single-page app (rewrite all urls to /index.html)? Y
-⋅⋅\* File /app/public/index.html already exists. Overwrite? N
+
+⋅⋅* File /app/public/index.html already exists. Overwrite? N
 
 10. Change the project to the new one you just created
 
