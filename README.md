@@ -18,7 +18,7 @@ HASURA_GRAPHQL_JWT_SECRET {"type":"RS512","jwk_url": "https://www.googleapis.com
 3. Clone project from github
 
 ```
-git clone https://github.com/leoalves/firebase-auth-hasura.git
+git clone https://github.com/leoalves/hasura-firebase-auth.git
 ```
 
 4. Install Firebase cli
