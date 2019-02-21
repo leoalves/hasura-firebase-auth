@@ -15,6 +15,12 @@ HASURA_GRAPHQL_JWT_SECRET {"type":"RS512","jwk_url": "https://www.googleapis.com
 
 2. Click on Open App, add the Access Key to access Hasura Console
 
+3. Create user table in Hasura. Select SQL option, paste this SQL Statement and click on the Run button:
+
+```
+CREATE TABLE "user" ("firebase_id" text NOT NULL UNIQUE, "name" text NOT NULL, "email" text NOT NULL UNIQUE, PRIMARY KEY ("firebase_id") );
+```
+
 3. Clone project from github
 
 ```
@@ -35,25 +41,27 @@ npm install -g firebase-tools
 
 8. In the Firebase Console change the Plan from Free to Blaze - pay as you go (The free plan does not allow request to a separate url (The Hasura inside Heroku))
 
-9. Initiate your Firebase Project in the project root, creating a new project
+9. In the Firebase Console click on Authentication - Set up sign-in method and enable Email/Password
+
+10. Initiate your Firebase Project in the project root, creating a new project
 
 ```
 firebase init
 ```
 
-⋅⋅⋅ Are you ready to proceed? Y
-⋅⋅⋅ Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
-⋅⋅⋅ Are you ready to proceed? Y
-⋅⋅⋅ What language would you like to use to write Cloud Functions? Select Typescript
-⋅⋅⋅ Do you want to use TSLint to catch probable bugs and enforce style? Y
-⋅⋅⋅ File functions/package.json already exists. Overwrite? N
-⋅⋅⋅ File functions/tsconfig.json already exists. Overwrite? N
-⋅⋅⋅ File functions/src/index.ts already exists. Overwrite? N
-⋅⋅⋅ File functions/.gitignore already exists. Overwrite? N
-⋅⋅⋅ Do you want to install dependencies with npm now? Y
-⋅⋅⋅ What do you want to use as your public directory? (public) ./app/build
-⋅⋅⋅ Configure as a single-page app (rewrite all urls to /index.html)? Y
-⋅⋅⋅ File /app/public/index.html already exists. Overwrite? N
+⋅⋅* Are you ready to proceed? Y
+⋅⋅* Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
+⋅⋅* Are you ready to proceed? Y
+⋅⋅* What language would you like to use to write Cloud Functions? Select Typescript
+⋅⋅* Do you want to use TSLint to catch probable bugs and enforce style? Y
+⋅⋅* File functions/package.json already exists. Overwrite? N
+⋅⋅* File functions/tsconfig.json already exists. Overwrite? N
+⋅⋅* File functions/src/index.ts already exists. Overwrite? N
+⋅⋅* File functions/.gitignore already exists. Overwrite? N
+⋅⋅* Do you want to install dependencies with npm now? Y
+⋅⋅* What do you want to use as your public directory? (public) ./app/build
+⋅⋅* Configure as a single-page app (rewrite all urls to /index.html)? Y
+⋅⋅\* File /app/public/index.html already exists. Overwrite? N
 
 10. Change the project to the new one you just created
 
