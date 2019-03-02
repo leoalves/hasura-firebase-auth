@@ -68,20 +68,21 @@ firebase init
 ```
 
 13. Follow the wizard:
-    a. Are you ready to proceed? Y
-    b. Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
-    c. Are you ready to proceed? Y
-    d. What language would you like to use to write Cloud Functions? Select Typescript
-    e. Do you want to use TSLint to catch probable bugs and enforce style? Y
-    f. File functions/package.json already exists. Overwrite? N
-    g. File functions/tsconfig.json already exists. Overwrite? N
-    h. File functions/src/index.ts already exists. Overwrite? N
-    l. File functions/.gitignore already exists. Overwrite? N
-    m. Do you want to install dependencies with npm now? Y
-    n. What do you want to use as your public directory? ./app/build
-    o. Configure as a single-page app (rewrite all urls to /index.html)? Y
-    p. File /app/public/index.html already exists. Overwrite? N
-
+```
+    Are you ready to proceed? Y
+    Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
+    Are you ready to proceed? Y
+    What language would you like to use to write Cloud Functions? Select Typescript
+    Do you want to use TSLint to catch probable bugs and enforce style? Y
+    File functions/package.json already exists. Overwrite? N
+    File functions/tsconfig.json already exists. Overwrite? N
+    File functions/src/index.ts already exists. Overwrite? N
+    File functions/.gitignore already exists. Overwrite? N
+    Do you want to install dependencies with npm now? Y
+    What do you want to use as your public directory? ./app/build
+    Configure as a single-page app (rewrite all urls to /index.html)? Y
+    File /app/public/index.html already exists. Overwrite? N
+```
 14. Change the project to the new one you just created
 
 ```
@@ -101,7 +102,9 @@ npm install
 ```
 
 17. Change the functions config url to the Heroku graphql instance you just created.
-    Open the file ./functions/src/config/graphql.ts and change the graphql_host variable to the new graphql endpoint.
+    Open the file 
+    ```./functions/src/config/graphql.ts``` 
+    and change the graphql_host variable to the new graphql endpoint.
     You can get the Graphql endpoint in the Hasura Console where the GraphiQL is. Also change the hasuraAccessKey variable to the one defined in the env vars in Heroku (step 2).
 
 18. Deploy the Firebase function to create the user ( If on windows rename the firebase.json from the root directory from `$RESOURCE_DIR` with `%RESOURCE_DIR%`)
@@ -115,12 +118,14 @@ firebase deploy --only functions
 20. In the same file (/app/src/confg/config.ts) change the graphqlUrl and subscriptionUrl with the Hasura Graphql endpoint.
 
 21. Change the Firebase Web Config settings in the React App. Go to the Firebase console (https://console.firebase.google.com).
-    a. Select your project.
-    b. Select Settings
-    c. Project Settings
-    d. Under Your Apps section.
-    e. Select the web icon and copy the Firebase config variable
-    f. replace the config variables in the file /app/src/firebase/index.ts, with the config info from your project
+    ```
+    Select your project.
+    Select Settings
+    Project Settings
+    Under Your Apps section.
+    Select the web icon and copy the Firebase config variable
+    replace the config variables in the file /app/src/firebase/index.ts, with the config info from your project
+    ```
 
 22. Go to the app folder. Install dependencies and build the React App
 
