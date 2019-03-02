@@ -1,4 +1,4 @@
-# Sample App demonstrating Firebase Authentication with Hasura
+# Firebase Authentication with Hasura Sample App
 
 This is a sample app to demontrate how to use Firebase Auth service to handle the authentication flow (generate JWT token, manage token expiration and renew, reset password, etc ) and configure Hasura to validate the token.
 
@@ -70,19 +70,19 @@ cd hasura-firebase-auth
 firebase init
 ```
 
-a. Are you ready to proceed? Y
-b. Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
-c. Are you ready to proceed? Y
-d. What language would you like to use to write Cloud Functions? Select Typescript
-e. Do you want to use TSLint to catch probable bugs and enforce style? Y
-f. File functions/package.json already exists. Overwrite? N
-g. File functions/tsconfig.json already exists. Overwrite? N
-h. File functions/src/index.ts already exists. Overwrite? N
-l. File functions/.gitignore already exists. Overwrite? N
-m. Do you want to install dependencies with npm now? Y
-n. What do you want to use as your public directory? ./app/build
-o. Configure as a single-page app (rewrite all urls to /index.html)? Y
-p. File /app/public/index.html already exists. Overwrite? N
+⋅⋅a. Are you ready to proceed? Y
+⋅⋅b. Which Firebase CLI features do you want to setup? (Select Hosting and Functions)
+⋅⋅c. Are you ready to proceed? Y
+⋅⋅d. What language would you like to use to write Cloud Functions? Select Typescript
+⋅⋅e. Do you want to use TSLint to catch probable bugs and enforce style? Y
+⋅⋅f. File functions/package.json already exists. Overwrite? N
+⋅⋅g. File functions/tsconfig.json already exists. Overwrite? N
+⋅⋅h. File functions/src/index.ts already exists. Overwrite? N
+⋅⋅l. File functions/.gitignore already exists. Overwrite? N
+⋅⋅m. Do you want to install dependencies with npm now? Y
+⋅⋅n. What do you want to use as your public directory? ./app/build
+⋅⋅o. Configure as a single-page app (rewrite all urls to /index.html)? Y
+⋅⋅p. File /app/public/index.html already exists. Overwrite? N
 
 10. Change the project to the new one you just created
 
@@ -117,12 +117,12 @@ firebase deploy --only functions
 9. In the same file (/app/src/confg/config.ts) change the graphqlUrl and subscriptionUrl with the Hasura Graphql endpoint.
 
 10. Change the Firebase Web Config settings in the React App. Go to the Firebase console (https://console.firebase.google.com).
-    a. Select your project.
-    b. Select Settings
-    c. Project Settings
-    d. Under Your Apps section.
-    e. Select the web icon and copy the Firebase config variable
-    f. replace the config variables in the file /app/src/firebase/index.ts, with the config info from your project
+    ⋅⋅a. Select your project.
+    ⋅⋅b. Select Settings
+    ⋅⋅c. Project Settings
+    ⋅⋅d. Under Your Apps section.
+    ⋅⋅e. Select the web icon and copy the Firebase config variable
+    ⋅⋅f. replace the config variables in the file /app/src/firebase/index.ts, with the config info from your project
 
 11. Go to the app folder. Install dependencies and build the React App
 
