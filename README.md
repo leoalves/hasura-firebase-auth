@@ -113,9 +113,9 @@ npm install
 firebase deploy --only functions
 ```
 
-19. Open /app/src/config/config.ts and change the firebaseUrl variable with the function url returned from the firebase deploy command
+19. Open ```/app/src/config/config.ts``` and change the firebaseUrl variable with the function url returned from the firebase deploy command
 
-20. In the same file (/app/src/confg/config.ts) change the graphqlUrl and subscriptionUrl with the Hasura Graphql endpoint.
+20. In the same file (```/app/src/confg/config.ts```) change the graphqlUrl and subscriptionUrl with the Hasura Graphql endpoint.
 
 21. Change the Firebase Web Config settings in the React App. Go to the Firebase console (https://console.firebase.google.com).
     ```
